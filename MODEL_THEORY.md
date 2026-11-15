@@ -59,7 +59,7 @@ Its conditional variance evolves as:
 Common restrictions include `ω > 0`, `α ≥ 0`, `β ≥ 0`. The usual sufficient condition for a finite long-run unconditional variance in standard GARCH(1,1) is `α + β < 1`, in which case:
 
 ```math
-\operatorname{Var}(\varepsilon_t) = \frac{\omega}{1-\alpha-\beta}.
+\mathrm{Var}(\varepsilon_t) = \frac{\omega}{1-\alpha-\beta}.
 ```
 
 The notebook specifies **Student's t innovations**, rather than Gaussian innovations, to allow heavier tails in return shocks. The standardized innovation `z_t` has conditional mean zero and variance one when the t degrees-of-freedom parameter is greater than two.
