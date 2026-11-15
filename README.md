@@ -21,17 +21,19 @@ The dataset incorporates:
 - **Price-derived features:** Daily logarithmic, absolute, and squared returns, and rolling 21-, 42-, and 63-day realized volatility.
 - **Market indicators:** USD index, S&P 500 returns, VIX levels and changes, and crude oil and silver returns.
 
-### Prediction Target
+## Prediction Target
 
 Daily logarithmic returns are calculated as:
 
-\(r_t=100\ln(P_t/P_{t-1})\)
+$$
+r_t = 100 \ln\left(\frac{P_t}{P_{t-1}}\right)
+$$
 
 The forward 21-day realized volatility target is:
 
-\[
-RV_{t,t+21}=\sqrt{\frac{252}{21}\sum_{j=1}^{21}r_{t+j}^{2}}
-\]
+$$
+RV_{t,t+21} = \sqrt{\frac{252}{21}\sum_{j=1}^{21}r_{t+j}^{2}}
+$$
 
 The target is expressed as annualized volatility in percentage terms.
 
@@ -91,20 +93,20 @@ Forecast accuracy will be evaluated using:
 - **RMSE:** Penalizes larger forecasting errors.
 - **MAE:** Measures average absolute forecasting error.
 - **QLIKE:** Evaluates conditional variance forecast accuracy.
-- - **BIAS:** Records the absolute deviations from the actual realized volatility.
+- **BIAS:** Records the absolute deviations from the actual realized volatility.
 
 ### Results
 
 *To be completed following final out-of-sample evaluation.*
 
 | Model | RMSE | MAE | QLIKE | BIAS |
-|---|---|---|---|
+|---|---|---|---|---|
 | LSTM | 11.153902 | 7.777844 | 0.617204 | -4.024647 |
 | GARCH(1,1) | 10.784047	 | 8.119742	 | 0.421693 | -0.465293 |
 
 ### Forecast Visualization
 
-*Insert finalized out-of-sample forecast plots here.*
+<img width="1617" height="854" alt="GARCH_vs_LSTM_Graph_Comparison" src="https://github.com/user-attachments/assets/0428f7b5-f728-4711-b375-224cc00daf57" />
 
 ## Key Findings
 
