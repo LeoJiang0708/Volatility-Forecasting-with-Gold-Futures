@@ -1,0 +1,19 @@
+# Direct dependencies imported by Gold Futures Forecast.ipynb.
+# Install with: python -m pip install -r requirements.txt
+# This is a portable dependency list, NOT an exact, tested version lockfile.
+
+numpy
+pandas
+matplotlib
+seaborn
+statsmodels
+arch
+tensorflow
+scikit-learn
+scikeras
+pandas-datareader
+yfinance
+
+# Run the notebook from VS Code or Jupyter.
+ipykernel
+notebook
